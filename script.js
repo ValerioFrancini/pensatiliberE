@@ -32,3 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         registerForm.reset();
     });
 });
+
+// Custom Alert Function
+    function customAlert(message, type) {
+        const alertBox = document.createElement('div');
+        alertBox.textContent = message;
+        alertBox.className = `custom-alert ${type}`;
+        document.body.appendChild(alertBox);
+
+        setTimeout(() => {
+            alertBox.remove();
+        }, 3000);
+    }
+});
+
